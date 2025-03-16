@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{c5d447b9-c8a2-423e-bb7f-982c6733d196}</ProjectGuid>
+    <RootNamespace>RustDMA</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>RustDMA</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\$(ProjectName)</OutDir>
+    <IntDir>$(SolutionDir)Build/obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\$(ProjectName)</OutDir>
+    <IntDir>$(SolutionDir)Build/obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)UI/ImGui;$(ProjectDir);$(ProjectDir)Config;$(ProjectDir)UI;$(SolutionDir);$(SolutionDir)DMALibrary;$(ProjectDir)Utils;$(ProjectDir)Cheat/SDK;$(ProjectDir)Cheat;$(SolutionDir)VMP;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d12.lib;d3d11.lib;dxgi.lib;$(SolutionDir)lib\DMALibrary.lib;crypt32.lib;$(SolutionDir)VMP\VMProtectSDK64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)UI/ImGui;$(ProjectDir);$(ProjectDir)Config;$(ProjectDir)UI;$(SolutionDir);$(SolutionDir)DMALibrary;$(ProjectDir)Utils;$(ProjectDir)Cheat/SDK;$(ProjectDir)Cheat;$(SolutionDir)VMP;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d12.lib;d3d11.lib;dxgi.lib;$(SolutionDir)lib\DMALibrary.lib;crypt32.lib;$(SolutionDir)VMP\VMProtectSDK64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Cheat\CheatThread.cpp" />
+    <ClCompile Include="Cheat\Features\Aimbot\Aimbot.cpp" />
+    <ClCompile Include="Cheat\Features\ESP\AnimalEsp.cpp" />
+    <ClCompile Include="Cheat\Features\ESP\CollectableEsp.cpp" />
+    <ClCompile Include="Cheat\Features\ESP\DeployableEsp.cpp" />
+    <ClCompile Include="Cheat\Features\ESP\DroppedItemEsp.cpp" />
+    <ClCompile Include="Cheat\Features\ESP\LootableEsp.cpp" />
+    <ClCompile Include="Cheat\Features\ESP\OreESP.cpp" />
+    <ClCompile Include="Cheat\Features\ESP\PlayerEsp.cpp" />
+    <ClCompile Include="Cheat\Features\ESP\VehicleEsp.cpp" />
+    <ClCompile Include="Cheat\Features\ESP\Visuals.cpp" />
+    <ClCompile Include="Cheat\Features\Misc Features\MiscFeatures.cpp" />
+    <ClCompile Include="Cheat\Features\Misc Features\MiscWeapons.cpp" />
+    <ClCompile Include="Cheat\Features\Misc Features\MovementFeatures.cpp" />
+    <ClCompile Include="Cheat\Features\Misc Features\SkinChanger.cpp" />
+    <ClCompile Include="Cheat\Features\Misc Features\VisualFeatures.cpp" />
+    <ClCompile Include="Cheat\Misc\CheatFunction.cpp" />
+    <ClCompile Include="Cheat\Misc\Checksum.cpp" />
+    <ClCompile Include="Cheat\Misc\kmbox.cpp" />
+    <ClCompile Include="Cheat\Misc\kmboxNet.cpp" />
+    <ClCompile Include="Cheat\Misc\UnityMath\FloatConversion.cpp" />
+    <ClCompile Include="Cheat\Misc\UnityMath\Matrix3x3.cpp" />
+    <ClCompile Include="Cheat\Misc\UnityMath\Matrix4x4.cpp" />
+    <ClCompile Include="Cheat\Misc\UnityMath\Quaternion.cpp" />
+    <ClCompile Include="Cheat\Misc\UnityMath\Vector2.cpp" />
+    <ClCompile Include="Cheat\Misc\UnityMath\Vector3.cpp" />
+    <ClCompile Include="Cheat\Misc\UnityMath\Vector4.cpp" />
+    <ClCompile Include="Cheat\Misc\Vector.cpp" />
+    <ClCompile Include="Cheat\SDK\BaseMovement.cpp" />
+    <ClCompile Include="Cheat\SDK\BaseNetworkable.cpp" />
+    <ClCompile Include="Cheat\SDK\BasePlayer.cpp" />
+    <ClCompile Include="Cheat\SDK\BaseProjectile.cpp" />
+    <ClCompile Include="Cheat\SDK\Client.cpp" />
+    <ClCompile Include="Cheat\SDK\ConsoleSystem.cpp" />
+    <ClCompile Include="Cheat\SDK\ConvarAdmin.cpp" />
+    <ClCompile Include="Cheat\SDK\ConvarGraphics.cpp" />
+    <ClCompile Include="Cheat\SDK\Encryption.cpp" />
+    <ClCompile Include="Cheat\SDK\FacepunchInput.cpp" />
+    <ClCompile Include="Cheat\SDK\Item.cpp" />
+    <ClCompile Include="Cheat\SDK\MainCamera.cpp" />
+    <ClCompile Include="Cheat\SDK\Networkable.cpp" />
+    <ClCompile Include="Cheat\SDK\OcclusionCulling.cpp" />
+    <ClCompile Include="Cheat\SDK\PlayerConvar.cpp" />
+    <ClCompile Include="Cheat\SDK\TODSky.cpp" />
+    <ClCompile Include="Cheat\SDK\World.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Config\Config.cpp" />
+    <ClCompile Include="Config\fileIO.cpp" />
+    <ClCompile Include="UI\Draw.cpp" />
+    <ClCompile Include="UI\Fuser\Fuser.cpp" />
+    <ClCompile Include="UI\GUI.cpp" />
+    <ClCompile Include="UI\Hotkey\Hotkey.cpp" />
+    <ClCompile Include="UI\ImGui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="UI\ImGui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="UI\ImGui\imgui.cpp" />
+    <ClCompile Include="UI\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="UI\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="UI\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="UI\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="UI\Plugins\Huds.cpp" />
+    <ClCompile Include="UI\Plugins\map.cpp" />
+    <ClCompile Include="UI\Plugins\plugin.cpp" />
+    <ClCompile Include="Utils\Logging.cpp" />
+    <ClCompile Include="Utils\Zip\zip.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cheat\CheatThread.h" />
+    <ClInclude Include="Cheat\Features\Aimbot\Aimbot.h" />
+    <ClInclude Include="Cheat\Features\ESP\AnimalEsp.h" />
+    <ClInclude Include="Cheat\Features\ESP\CollectableEsp.h" />
+    <ClInclude Include="Cheat\Features\ESP\DeployableEsp.h" />
+    <ClInclude Include="Cheat\Features\ESP\DroppedItemEsp.h" />
+    <ClInclude Include="Cheat\Features\ESP\LootableEsp.h" />
+    <ClInclude Include="Cheat\Features\ESP\OreESP.h" />
+    <ClInclude Include="Cheat\Features\ESP\PlayerEsp.h" />
+    <ClInclude Include="Cheat\Features\ESP\VehicleEsp.h" />
+    <ClInclude Include="Cheat\Features\ESP\Visuals.h" />
+    <ClInclude Include="Cheat\Features\Misc Features\MiscFeatures.h" />
+    <ClInclude Include="Cheat\Features\Misc Features\MiscWeapons.h" />
+    <ClInclude Include="Cheat\Features\Misc Features\MovementFeatures.h" />
+    <ClInclude Include="Cheat\Features\Misc Features\SkinChanger.h" />
+    <ClInclude Include="Cheat\Features\Misc Features\VisualFeatures.h" />
+    <ClInclude Include="Cheat\Globals.h" />
+    <ClInclude Include="Cheat\Misc\CheatFunction.h" />
+    <ClInclude Include="Cheat\Misc\Checksum.h" />
+    <ClInclude Include="Cheat\Misc\HidTable.h" />
+    <ClInclude Include="Cheat\Misc\kmbox.h" />
+    <ClInclude Include="Cheat\Misc\kmboxNet.h" />
+    <ClInclude Include="Cheat\Misc\PerlinNoise.hpp" />
+    <ClInclude Include="Cheat\Misc\UnityMath\DynamicArray.hpp" />
+    <ClInclude Include="Cheat\Misc\UnityMath\FloatConversion.hpp" />
+    <ClInclude Include="Cheat\Misc\UnityMath\Matrix3x3.hpp" />
+    <ClInclude Include="Cheat\Misc\UnityMath\Matrix4x4.hpp" />
+    <ClInclude Include="Cheat\Misc\UnityMath\Quaternion.hpp" />
+    <ClInclude Include="Cheat\Misc\UnityMath\Vector2.hpp" />
+    <ClInclude Include="Cheat\Misc\UnityMath\Vector3.hpp" />
+    <ClInclude Include="Cheat\Misc\UnityMath\Vector4.hpp" />
+    <ClInclude Include="Cheat\Misc\Vector.h" />
+    <ClInclude Include="Cheat\SDK\BaseMovement.h" />
+    <ClInclude Include="Cheat\SDK\BaseNetworkable.h" />
+    <ClInclude Include="Cheat\SDK\BasePlayer.h" />
+    <ClInclude Include="Cheat\SDK\BaseProjectile.h" />
+    <ClInclude Include="Cheat\SDK\Client.h" />
+    <ClInclude Include="Cheat\SDK\ConsoleSystem.h" />
+    <ClInclude Include="Cheat\SDK\ConvarAdmin.h" />
+    <ClInclude Include="Cheat\SDK\ConvarGraphics.h" />
+    <ClInclude Include="Cheat\SDK\Encryption.h" />
+    <ClInclude Include="Cheat\SDK\FacepunchInput.h" />
+    <ClInclude Include="Cheat\SDK\Item.h" />
+    <ClInclude Include="Cheat\SDK\MainCamera.h" />
+    <ClInclude Include="Cheat\SDK\Networkable.h" />
+    <ClInclude Include="Cheat\SDK\OcclusionCulling.h" />
+    <ClInclude Include="Cheat\SDK\PlayerConvar.h" />
+    <ClInclude Include="Cheat\SDK\TODSky.h" />
+    <ClInclude Include="Cheat\SDK\World.h" />
+    <ClInclude Include="Config\Config.h" />
+    <ClInclude Include="Config\fileIO.h" />
+    <ClInclude Include="Config\hash.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="UI\Font\emoji.h" />
+    <ClInclude Include="UI\Font\fontawesome_brands.h" />
+    <ClInclude Include="UI\Font\fontawesome_duotone.h" />
+    <ClInclude Include="UI\Font\fontawesome_regular.h" />
+    <ClInclude Include="UI\Font\newIcons.h" />
+    <ClInclude Include="UI\Font\roboto.h" />
+    <ClInclude Include="UI\Font\stb_image.h" />
+    <ClInclude Include="UI\Font\textFont.h" />
+    <ClInclude Include="UI\Font\twemoji.h" />
+    <ClInclude Include="UI\Hotkey\Hotkey.h" />
+    <ClInclude Include="UI\Plugins\Huds.h" />
+    <ClInclude Include="UI\Plugins\map.h" />
+    <ClInclude Include="UI\Plugins\plugin.h" />
+    <ClInclude Include="Utils\xorstr.hpp" />
+    <ClInclude Include="context.h" />
+    <ClInclude Include="UI\Draw.h" />
+    <ClInclude Include="UI\Fuser\Fuser.h" />
+    <ClInclude Include="UI\GUI.h" />
+    <ClInclude Include="UI\ImGui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="UI\ImGui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="UI\ImGui\imconfig.h" />
+    <ClInclude Include="UI\ImGui\imgui.h" />
+    <ClInclude Include="UI\ImGui\imgui_internal.h" />
+    <ClInclude Include="UI\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="UI\ImGui\imstb_textedit.h" />
+    <ClInclude Include="UI\ImGui\imstb_truetype.h" />
+    <ClInclude Include="UI\ImGui\stb_image.h" />
+    <ClInclude Include="Utils\Logging.h" />
+    <ClInclude Include="Utils\Zip\zip.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
